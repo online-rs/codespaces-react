@@ -1,0 +1,30 @@
+.fundoheader{
+    flex-direction: row;
+    background-color: #004aad;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.headernav {
+    display: flex;
+    flex-direction: row;
+    background-color: #004aad;
+    padding: 10px;
+    justify-content: space-between; /* Mantém o espaçamento entre os itens */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza horizontalmente o contêiner */
+}
+
+.conainterMenus{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,19 @@
+.logo{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.lucianofoto{
+    height: 200px;
+}
+
+.logo_coluna{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
