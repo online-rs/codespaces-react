@@ -7,7 +7,7 @@ function AudioPlayer() {
 
   useEffect(() => {
     if (audioRef.current) {
-        audioRef.current.volume = 0.5;
+      audioRef.current.volume = 0.5;
 
       if (isPlaying) {
         audioRef.current.play();
@@ -24,7 +24,7 @@ function AudioPlayer() {
   return (
     <div className="audio-player">
       <audio ref={audioRef} loop>
-        <source src="src/components/musica.mp3" type="audio/mp3" />
+        <source src="/musica.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
       <button className="play-pause-button" onClick={handlePlayPauseClick}>
