@@ -3,6 +3,7 @@ import HeaderNav from './HeaderNav';
 import Proposta from './components/Proposta';
 import ImageUploader from './ImageUploader';
 import ImageCarousel from './ImageCarousel';
+import AudioPlayer from './components/AudioPlayer';
 
 function App() {
   const comoFunciona = [
@@ -50,7 +51,7 @@ function App() {
     objetivo="Melhorar a qualidade da educação nas 44 escolas municipais de ensino fundamental de Canoas por meio da implementação do programa 'Ciência e Gestão pela Educação', visando aumentar o aprendizado dos alunos e reduzir a evasão escolar a um custo acessível, replicando os resultados obtidos no Rio de Janeiro."
 />
       </header>
-      <ImageCarousel />
+      <AudioPlayer />
     </div>
   );
 }

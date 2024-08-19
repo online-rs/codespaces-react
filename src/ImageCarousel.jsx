@@ -6,7 +6,6 @@ function ImageCarousel() {
   const [images, setImages] = useState([]);
   const [paused, setPaused] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [animationEnd, setAnimationEnd] = useState(false);
   const carouselRef = useRef(null);
 
   useEffect(() => {
@@ -19,14 +18,16 @@ function ImageCarousel() {
   }, []);
 
   useEffect(() => {
-    if (animationEnd && carouselRef.current) {
-      // Reset the animation to restart
-      carouselRef.current.classList.remove('reset');
-      void carouselRef.current.offsetWidth; // Trigger reflow
-      carouselRef.current.classList.add('reset');
-      setAnimationEnd(false);
+    if (carouselRef.current) {
+      const interval = setInterval(() => {
+        if (!paused) {
+          carouselRef.current.scrollBy({ left: carouselRef.current.offsetWidth, behavior: 'smooth' });
+        }
+      }, 3000); // Ajuste o intervalo conforme necessário
+
+      return () => clearInterval(interval);
     }
-  }, [animationEnd]);
+  }, [paused]);
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -40,17 +41,9 @@ function ImageCarousel() {
     setSelectedImage(null);
   };
 
-  const handleAnimationEnd = () => {
-    setAnimationEnd(true);
-  };
-
   return (
     <div className="carousel-container" onClick={handleCarouselClick}>
-      <div
-        ref={carouselRef}
-        className={`carousel-track ${paused ? 'paused' : ''}`}
-        onAnimationEnd={handleAnimationEnd}
-      >
+      <div ref={carouselRef} className="carousel-track">
         {images.map((image) => (
           <div key={image.id} className="carousel-item" onClick={() => handleImageClick(image)}>
             <img src={image.file} alt={image.name} />
