@@ -1,15 +1,21 @@
 import LogoTitulo from "./LogoTitulo";
 import './HeaderNav.css';
 import Button from "./components/Button";
+import Proposta from "./components/Proposta";
 
 function HeaderNav() {
     // Array com os dados dos botões
     const buttons = [
         { text: 'Início' },
-        { text: 'Sobre' },
-        { text: 'Serviços' },
+        { text: 'Sobre Mim' },
+        { text: 'Propostas' },
+        { text: 'Agenda' },
+        { text: 'Pariticpe' },
         { text: 'Contato' }
     ];
+
+
+
 
     return (
         <div className="fundoheader">
@@ -20,9 +26,11 @@ function HeaderNav() {
                         <Button
                             key={index}
                             text={button.text}
+                            classe='custom-button'
                         />
                     ))}
                 </div>
+                
             </div>
         </div>
     );

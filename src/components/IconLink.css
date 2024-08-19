@@ -1,9 +1,18 @@
 .rede {
-    width: 50px;
+    width: 50px; /* Tamanho padrão */
     height: 50px;
     transition: transform 0.3s ease; /* Suaviza a transição do efeito */
 }
 
+/* Efeito de hover para telas maiores */
 .rede:hover {
     transform: scale(1.2); /* Aumenta o tamanho em 20% */
+}
+
+/* Estilos para telas menores (mobile) */
+@media (max-width: 768px) {
+    .rede {
+        width: 40px; /* Ajusta o tamanho da imagem para telas menores */
+        height: 40px;
+    }
 }

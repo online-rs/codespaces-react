@@ -1,4 +1,4 @@
-.logo{
+.logo {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -7,13 +7,32 @@
     align-content: center;
 }
 
-.lucianofoto{
+/* Estilos para telas maiores */
+.lucianofoto {
     height: 200px;
 }
 
-.logo_coluna{
+.logo_coluna {
     margin: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* Estilos para telas menores (mobile) */
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column; /* Alinha os itens em coluna em vez de linha */
+    }
+
+    .lucianofoto {
+        height: auto;
+        width: 360px; /* Reduz a altura da imagem para se ajustar melhor a telas menores */
+    }
+
+    .logo_coluna {
+        flex-direction: row;
+        margin: 5px; /* Reduz a margem para aproveitar melhor o espaço da tela */
+        gap: 25px; /* Reduz o espaçamento entre os itens */
+    }
 }

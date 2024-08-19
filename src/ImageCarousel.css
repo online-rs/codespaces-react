@@ -1,0 +1,84 @@
+.carousel-container {
+    position: relative;
+    max-height: 360px;
+    overflow: hidden;
+    max-width: 1200px;
+    color: black;
+  }
+  
+  .carousel-track {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    transition: animation-play-state 0.5s ease;
+  }
+  
+  .carousel-track.paused {
+    animation-play-state: paused;
+  }
+  
+  .carousel-track.reset {
+    animation: none;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    align-items: center;
+    align-content: center;
+    width: calc(25% - 10px); /* Ajuste a largura para 4 imagens visíveis */
+    margin-right: 10px; /* Adiciona uma margem entre as imagens */
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .modal-content p {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+  }
+  

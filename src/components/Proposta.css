@@ -1,0 +1,105 @@
+.proposta-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+    max-width: 1200px;
+}
+
+/* Estilos para telas maiores */
+.proposta-numero {
+    font-size: 18px;
+    color: #004aad;
+}
+
+.proposta-titulo {
+    font-size: 24px;
+    color: #00bcef;
+    margin-bottom: 10px;
+}
+
+.proposta-descricao {
+    font-size: 16px;
+    color: #333;
+}
+
+.proposta-como-funciona h4 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #004aad;
+}
+
+.proposta-como-funciona p {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: black;
+    font-size: 16px;
+    text-align: left;
+    margin: 4px;
+}
+
+.proposta-objetivo {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.proposta-toggle-button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004aad;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.proposta-toggle-button:hover {
+    background-color: #003a8c;
+}
+
+/* Estilos para telas menores (mobile) */
+@media (max-width: 768px) {
+    .proposta-container {
+        padding: 15px;
+        margin: 6px;
+    }
+
+    .proposta-numero {
+        font-size: 16px;
+    }
+
+    .proposta-titulo {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .proposta-descricao {
+        font-size: 14px;
+    }
+
+    .proposta-como-funciona h4 {
+        font-size: 16px;
+    }
+
+    .proposta-como-funciona p {
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .proposta-objetivo {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .proposta-toggle-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

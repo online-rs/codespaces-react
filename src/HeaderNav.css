@@ -1,4 +1,4 @@
-.fundoheader{
+.fundoheader {
     flex-direction: row;
     background-color: #004aad;
     padding: 10px;
@@ -7,9 +7,9 @@
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    
 }
 
+/* Estilos para telas maiores */
 .headernav {
     display: flex;
     flex-direction: row;
@@ -20,11 +20,39 @@
     margin: 0 auto; /* Centraliza horizontalmente o contêiner */
 }
 
-.conainterMenus{
+.conainterMenus {
     display: flex;
     align-items: center;
     align-content: center;
     flex-direction: row;
     gap: 5px;
     flex-wrap: wrap;
+    margin: 0px 50px;
+}
+
+/* Estilos para telas menores (mobile) */
+@media (max-width: 768px) {
+    .fundoheader {
+        display: flex;
+        max-width: 100vw; /* Remove a largura máxima para usar a largura total da tela */
+        flex-direction: column; /* Alinha os itens em coluna */
+    }
+
+    .headernav {
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 0;
+        max-width: 360px; /* Remove a largura máxima para usar a largura total da tela */
+        margin: 0; /* Remove a margem para utilizar o espaço total */
+    }
+
+    .conainterMenus {
+        margin: 20px;
+        flex-direction: row; /* Alinha os itens em coluna */
+        margin: 0 10px; /* Reduz a margem lateral */
+        gap: 10px; /* Aumenta o espaço entre os itens */
+    }
 }
