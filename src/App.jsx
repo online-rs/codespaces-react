@@ -16,7 +16,9 @@ function App() {
     <div className="App">
       <HeaderNav />
       <header className="App-header">
-        <FirstBand />    
+        <FirstBand /> 
+        <h2 class="propostas-title">Propostas</h2>
+   
         <Proposta 
     numero="01"
     area="Fiscalização"

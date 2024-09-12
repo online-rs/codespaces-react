@@ -8,3 +8,24 @@
   background-color: #004aad;
   margin: 0;
 }
+
+.propostas-title {
+  font-size: 36px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  color: #ffffff; /* Cor do texto */
+  margin-top: 30px; /* Espaço superior */
+  text-align: left; /* Alinha o título à esquerda */
+}
+
+@media (max-width: 768px) {
+  .propostas-title {
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #ffffff; /* Cor do texto */
+    margin-top: 40px; /* Espaço superior */
+    text-align: center;
+  }
+
+
+
+}
