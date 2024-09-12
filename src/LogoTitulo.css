@@ -38,13 +38,23 @@
     }
 
     .logo.fixed {
+        flex-direction: row;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1000;
-        background-color: #004aad; /* Ajusta a cor de fundo conforme necessário */
+        background-color: #004bade0; /* Ajusta a cor de fundo conforme necessário */
         border-bottom: 1px solid #ddd; /* Adiciona uma borda para definir o topo do componente */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave para dar profundidade */
+        max-height: 190px;
     }
+
+
+    .logo.fixed div{
+        flex-direction: column;
+        margin: 5px;
+        gap: 15px;
+    }
+
 }

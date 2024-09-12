@@ -4,6 +4,7 @@ import Proposta from './components/Proposta';
 import ImageUploader from './ImageUploader';
 import ImageCarousel from './ImageCarousel';
 import AudioPlayer from './components/AudioPlayer';
+import FirstBand from './components/FirstBand';
 
 function App() {
   const comoFunciona = [
@@ -15,7 +16,7 @@ function App() {
     <div className="App">
       <HeaderNav />
       <header className="App-header">
-        <h1>Site em Constução</h1>
+        <FirstBand />    
         <Proposta 
     numero="01"
     area="Fiscalização"

@@ -1,0 +1,64 @@
+/* Estilos para o componente FirstBand */
+.first-band-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Cor de fundo mais suave */
+    border-radius: 16px; /* Bordas arredondadas consistentes */
+    border: 1px solid #ddd; /* Borda suave */
+    max-width: 1200px; /* Limite de largura consistente */
+    height: 50vh;
+    overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura máxima */
+    margin: 10px 0; /* Margem para espaçamento */
+}
+
+.first-band-image {
+    width: 100%; /* Largura máxima da imagem */
+    max-width: 600px; /* Largura máxima para telas grandes */
+    height: auto;
+    border-radius: 10px; /* Borda arredondada para um toque visual agradável */
+    margin-bottom: 20px; /* Espaço entre a imagem e o conteúdo */
+}
+
+.first-band-title {
+    font-size: 24px; /* Tamanho da fonte do título ajustado */
+    color: #00bcef; /* Cor do texto consistente com o padrão */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.first-band-subtitle {
+    font-size: 18px; /* Tamanho da fonte do subtítulo ajustado */
+    color: #004aad; /* Cor mais forte para subtítulos */
+    margin-bottom: 20px;
+}
+
+.first-band-call-to-action {
+    font-size: 16px; /* Tamanho da frase de impacto ajustado */
+    color: #333;
+    font-weight: 500;
+}
+
+/* Estilos para telas menores (mobile) */
+@media (max-width: 768px) {
+    .first-band-container {
+        padding: 15px;
+        margin: 6px;
+    }
+
+    .first-band-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .first-band-subtitle {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .first-band-call-to-action {
+        font-size: 14px;
+    }
+}
