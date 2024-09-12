@@ -1,3 +1,4 @@
+/* Estilos gerais */
 .logo {
     display: flex;
     flex-direction: row;
@@ -5,9 +6,9 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+    transition: all 0.3s ease; /* Adiciona transição suave para todas as propriedades */
 }
 
-/* Estilos para telas maiores */
 .lucianofoto {
     height: 200px;
 }
@@ -22,17 +23,28 @@
 /* Estilos para telas menores (mobile) */
 @media (max-width: 768px) {
     .logo {
-        flex-direction: column; /* Alinha os itens em coluna em vez de linha */
+        flex-direction: column;
     }
 
     .lucianofoto {
         height: auto;
-        width: 360px; /* Reduz a altura da imagem para se ajustar melhor a telas menores */
+        width: 360px;
     }
 
     .logo_coluna {
         flex-direction: row;
-        margin: 5px; /* Reduz a margem para aproveitar melhor o espaço da tela */
-        gap: 25px; /* Reduz o espaçamento entre os itens */
+        margin: 5px;
+        gap: 25px;
+    }
+
+    .logo.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #004aad; /* Ajusta a cor de fundo conforme necessário */
+        border-bottom: 1px solid #ddd; /* Adiciona uma borda para definir o topo do componente */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave para dar profundidade */
     }
 }

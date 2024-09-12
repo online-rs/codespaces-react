@@ -1,9 +1,21 @@
 import './LogoTitulo.css';
 import IconLink from './components/IconLink';
+import { useEffect, useState } from 'react';
 
 function LogoTitulo() {
+    const [isFixed, setIsFixed] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsFixed(window.scrollY > 50); // Ajuste o valor conforme necessário
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className='logo'>
+        <div className={`logo ${isFixed ? 'fixed' : ''}`}>
             <img className='lucianofoto' src="/logo.png" alt="Descrição da imagem" />
             <div className='logo_coluna'>
                 <IconLink
